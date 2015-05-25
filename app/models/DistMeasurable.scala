@@ -1,4 +1,4 @@
-package com.travel.model
+package models
 
 /** DistMeasurable 
  *  @author Stephen Johnson

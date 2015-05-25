@@ -1,4 +1,4 @@
-package com.travel.model
+package models
 import scala.collection.mutable.MultiMap
 
 /** Graph 
@@ -36,6 +36,9 @@ case class Graph[A](adjacencyList: Map[A,Seq[A]]) {
 
   def minSpanningTree(implicit ctx: DistMeasurable[A]): Graph[A] = {
     import scala.collection.mutable.{Map, Set, HashMap}
+    if (adjacencyList.isEmpty) {
+      return Graph(adjacencyList)
+    }
     val treeNodes: Set[Node] = Set()
     val remainingMap: Map[A, Node] = Map()
     remainingMap ++= adjacencyList.keySet.map(x => (x, Node(x, Double.PositiveInfinity, None))).toMap
@@ -60,11 +63,14 @@ case class Graph[A](adjacencyList: Map[A,Seq[A]]) {
     val graph = new HashMap[A, Set[A]] with MultiMap[A, A]
     for (node <- treeNodes) {
       node.parent match {
-        case Some(parent) => {
+        case Some(parent) =>
           graph.addBinding(node.elem, parent.elem)
           graph.addBinding(parent.elem, node.elem)
-        }
-        case None => // root node will not have parent
+        case None =>
+          if (!graph.contains(node.elem)) {
+            // root won't have a parent.  Add if child did not already trigger an addition
+            graph.put(node.elem, Set[A]())
+          }
       }
     }
     Graph(graph)

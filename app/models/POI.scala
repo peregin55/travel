@@ -1,4 +1,4 @@
-package com.travel.model
+package models
 import Category.Category
 import scala.math._
 
@@ -44,8 +44,6 @@ case class POI(name: String,
                coord: Coord,
                description: Option[String],
                category: Option[Category]) extends Location
-case class City(name: String, coord: Coord, pois: Seq[POI]) extends Location
-case class Country(name: String, coord: Coord, cities: Seq[City]) extends Location
 
 object Category extends Enumeration {
   type Category = Value

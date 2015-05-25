@@ -1,7 +1,7 @@
-package com.travel.model
+package models
 import org.joda.time.DateTime
 import org.joda.time.Duration
-import com.travel.model.Location._
+import models.Location._
 
 /** Itinerary
  *  @author Stephen Johnson
@@ -13,10 +13,21 @@ object Itinerary {
     }
     val poiTree = Graph(pois).minSpanningTree
     val completePois: Seq[POI] = poiTree.depthFirstTraversal(pois.head)
-    val dateDuration = new Duration((endDate.getMillis - startDate.getMillis) / (completePois.size-1))
-    def dateGenerator(date: DateTime): Stream[DateTime] = date #:: dateGenerator(date.plus(dateDuration))
-    val reservations: Seq[Reservation] = completePois.zip(dateGenerator(startDate)).map{ case (poi, date) => Reservation(poi.name, poi, date, 0.0) }
+    val dateStream: Stream[DateTime] = createDateStream(startDate, endDate, completePois.size-1)
+    val reservations: Seq[Reservation] = completePois.zip(dateStream).map{
+      case (poi, date) => Reservation(poi.name, poi, date, 0.0)
+    }
     Itinerary(name, reservations)
+  }
+  def createDateStream(startDate: DateTime, endDate: DateTime, numIntervals: Int): Stream[DateTime] = {
+    if (numIntervals < 1) {
+      def dateGenerator(date: DateTime): Stream[DateTime] = date #:: dateGenerator(date)
+      dateGenerator(startDate)
+    } else {
+      val dateDuration = new Duration((endDate.getMillis - startDate.getMillis) / (numIntervals))
+      def dateGenerator(date: DateTime): Stream[DateTime] = date #:: dateGenerator(date.plus(dateDuration))
+      dateGenerator(startDate)
+    }
   }
 }
 

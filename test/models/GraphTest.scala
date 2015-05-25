@@ -1,4 +1,4 @@
-package com.travel.model
+package models
 import org.scalatest.FunSuite
 import org.scalatest.Matchers._
 
