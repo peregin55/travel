@@ -26,10 +26,19 @@ The URL above produces the following:
     "reservations": [
         {
             "canOverlap": false,
-            "endDate": "2015-05-25T15:43:33.364-04:00",
+            "endDate": "2015-05-25T16:03:26.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 42.3600825,
+                    "lon": -71.0588801
+                },
+                "description": null,
+                "name": "Boston"
+            },
             "name": "Boston",
             "price": 0.0,
-            "startDate": "2015-05-25T15:43:33.364-04:00",
+            "startDate": "2015-05-25T16:03:26.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -42,10 +51,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-06-17T15:51:03.364-04:00",
+            "endDate": "2015-06-17T16:10:56.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 37.7749295,
+                    "lon": -122.4194155
+                },
+                "description": null,
+                "name": "San Francisco"
+            },
             "name": "San Francisco",
             "price": 0.0,
-            "startDate": "2015-06-17T15:51:03.364-04:00",
+            "startDate": "2015-06-17T16:10:56.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -58,10 +76,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-07-10T15:58:33.364-04:00",
+            "endDate": "2015-07-10T16:18:26.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 42.3600825,
+                    "lon": -71.0588801
+                },
+                "description": null,
+                "name": "Boston"
+            },
             "name": "Boston",
             "price": 0.0,
-            "startDate": "2015-07-10T15:58:33.364-04:00",
+            "startDate": "2015-07-10T16:18:26.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -74,10 +101,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-08-02T16:06:03.364-04:00",
+            "endDate": "2015-08-02T16:25:56.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 48.856614,
+                    "lon": 2.3522219
+                },
+                "description": null,
+                "name": "Paris"
+            },
             "name": "Paris",
             "price": 0.0,
-            "startDate": "2015-08-02T16:06:03.364-04:00",
+            "startDate": "2015-08-02T16:25:56.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -90,10 +126,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-08-25T16:13:33.364-04:00",
+            "endDate": "2015-08-25T16:33:26.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 28.6139391,
+                    "lon": 77.2090212
+                },
+                "description": null,
+                "name": "New Delhi"
+            },
             "name": "New Delhi",
             "price": 0.0,
-            "startDate": "2015-08-25T16:13:33.364-04:00",
+            "startDate": "2015-08-25T16:33:26.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -106,10 +151,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-09-17T16:21:03.364-04:00",
+            "endDate": "2015-09-17T16:40:56.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 48.856614,
+                    "lon": 2.3522219
+                },
+                "description": null,
+                "name": "Paris"
+            },
             "name": "Paris",
             "price": 0.0,
-            "startDate": "2015-09-17T16:21:03.364-04:00",
+            "startDate": "2015-09-17T16:40:56.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -122,10 +176,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-10-10T16:28:33.364-04:00",
+            "endDate": "2015-10-10T16:48:26.790-04:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 42.3600825,
+                    "lon": -71.0588801
+                },
+                "description": null,
+                "name": "Boston"
+            },
             "name": "Boston",
             "price": 0.0,
-            "startDate": "2015-10-10T16:28:33.364-04:00",
+            "startDate": "2015-10-10T16:48:26.790-04:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -138,10 +201,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-11-02T15:36:03.364-05:00",
+            "endDate": "2015-11-02T15:55:56.790-05:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": -9.189967,
+                    "lon": -75.015152
+                },
+                "description": null,
+                "name": "Peru"
+            },
             "name": "Peru",
             "price": 0.0,
-            "startDate": "2015-11-02T15:36:03.364-05:00",
+            "startDate": "2015-11-02T15:55:56.790-05:00",
             "startPoi": {
                 "category": null,
                 "coord": {
@@ -154,10 +226,19 @@ The URL above produces the following:
         },
         {
             "canOverlap": false,
-            "endDate": "2015-11-25T15:43:33.364-05:00",
+            "endDate": "2015-11-25T16:03:26.790-05:00",
+            "endPoi": {
+                "category": null,
+                "coord": {
+                    "lat": 42.3600825,
+                    "lon": -71.0588801
+                },
+                "description": null,
+                "name": "Boston"
+            },
             "name": "Boston",
             "price": 0.0,
-            "startDate": "2015-11-25T15:43:33.364-05:00",
+            "startDate": "2015-11-25T16:03:26.790-05:00",
             "startPoi": {
                 "category": null,
                 "coord": {

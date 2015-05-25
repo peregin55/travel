@@ -29,6 +29,7 @@ object JsonWrite {
       "name" -> r.name,
       "startPoi" -> r.startPoi,
       "startDate" -> r.startDate,
+      "endPoi" -> r.endPoi,
       "endDate" -> r.endDate,
       "price" -> r.price,
       "canOverlap" -> r.canOverlap)
