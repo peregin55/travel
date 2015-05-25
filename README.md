@@ -1,14 +1,14 @@
 travel
 =========
-Service that will construct a travel plan based on places you would like to go.  For instance, if you would like to create a travel plan to go from Boston to San Francisco, Peru, New Dehli, and Paris for a duration of 6 months, enter the following URL:
+A service that will construct a travel plan based on places you would like to go.  For instance, to create an itinerary starting in Boston and continuing to San Francisco, Peru, New Dehli, and Paris for a duration of 6 months, enter the following URL:
 
     http://localhost:9000/itinerary?loc=Boston&loc=San+Francisco&loc=Peru&loc=New+Delhi&loc=Paris&months=6
 
 The service will perform the following steps:
-  1. Use Google APIs to query for the latitude and longitude for the given locations
-  2. Generate a complete graph representing all of the locations, weighted by the geodetic distance
+  1. Query Google Geocoding API for the latitude and longitude of the given locations
+  2. Generate a complete graph representing all locations, weighted by the distance
   3. Construct a minimum spanning tree of locations
-  4. Iterate over the MST, starting at the first location entered, and iterate back for the return journey
+  4. Iterate over the MST starting at the first location entered, including the return journey
 
 ## build and run
 After downloading the source, navigate to the root of the project and use the following command to build and start a local server:
@@ -18,6 +18,8 @@ After downloading the source, navigate to the root of the project and use the fo
 In order to build the service you will need proper JVM/Scala environment with Scala Build Tool (SBT).
 
 ## Sample Response 
+The URL above produces the following:
+
 ```
 {
     "name": "Trip",
