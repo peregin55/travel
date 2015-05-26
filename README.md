@@ -1,10 +1,14 @@
 travel
 =========
-A service that will construct a travel plan based on places you would like to go.  For instance, to create an itinerary starting in Boston and continuing to San Francisco, Peru, New Dehli, and Paris for a duration of 6 months, enter the following URL:
+A service that will construct a travel plan based on the locations provided.  For instance, to create an itinerary starting in Boston and continuing to San Francisco, Peru, New Delhi, and Paris for a duration of 6 months, enter the following URL:
 
     http://localhost:9000/itinerary?loc=Boston&loc=San+Francisco&loc=Peru&loc=New+Delhi&loc=Paris&months=6
 
-The service will perform the following steps:
+The itinerary produced will contain an optimal path through all locations, starting from the first location listed, with the following assumptions:
+  * Direct flights only exist between locations that are located closest to each other
+  * The user will only visit the locations provided and no other
+
+The service will perform the following steps to create an itinerary:
   1. Query Google Geocoding API for the latitude and longitude of the given locations
   2. Generate a complete graph representing all locations, weighted by the distance
   3. Construct a minimum spanning tree of locations
