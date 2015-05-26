@@ -8,7 +8,8 @@ The service will perform the following steps:
   1. Query Google Geocoding API for the latitude and longitude of the given locations
   2. Generate a complete graph representing all locations, weighted by the distance
   3. Construct a minimum spanning tree of locations
-  4. Iterate over the MST starting at the first location entered, including the return journey
+  4. Iterate over the MST starting at the first location entered
+  5. Build Itinerary instance of the locations visted, including the return journey
 
 ## build and run
 After downloading the source, navigate to the root of the project and use the following command to build and start a local server:
